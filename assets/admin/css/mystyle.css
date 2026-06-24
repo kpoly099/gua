@@ -1,0 +1,608 @@
+/* CSS by Maruf Morshed Joy +8801770009133 */
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Styles for the topmenu */
+
+.logo {
+  background-color: #333;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 8px;
+  color: white;
+}
+.logo h1 {
+    margin: 0;
+    line-height: 1;
+    color: #f7fbff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-style: inherit;
+    letter-spacing: 0px;
+	cursor: pointer;
+}
+
+.logo h1 span {
+    font-weight: 700;
+    position: relative;
+    top: -1px;
+    background-color: #daa300;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 13px;
+    letter-spacing: normal;
+	cursor: pointer;
+}
+
+  .mylogomenu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    z-index: 1000; /* Ensures the menu is above other content */
+  }
+  
+
+.navbar-brand:hover {
+	opacity: 1;
+	color: white;
+	transform: scale(1.1);
+	
+}
+
+/* Styles for the menubar */
+.menu {
+  background-color: #333;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px;
+  margin-top: 50px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(88,85,85,1) 100%);
+}
+
+.fabutton {
+	color: white;
+}
+
+/*=========*/
+
+/*========*/
+
+.fabutton:hover {
+	color: #daa300;
+	cursor: pointer;
+	transform: scale(1.3);
+}
+
+/* Flexbox for desktop view */
+@media screen and (min-width: 601px) {
+  .menu {
+    display: flex;
+	justify-content: space-evenly;
+  }
+
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+	align-items: center;
+  }
+
+}
+
+/* Menubar Css end */
+
+/*ADS */
+#users {
+	
+}
+  .adescription {
+    display: block; /* Initially displayed on all devices */
+  }
+  
+  @media (min-width: 600px) {
+    /* Hide description on devices with a minimum width of 768px (desktops) */
+    .adescription {
+      display: none;
+    }
+  }
+/*ADS END */
+
+.player_header {
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .player_header {
+    margin-top: 60px;
+  }
+}
+
+/* Center the image */
+	.center-image {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+	}
+
+    /* Make the image responsive */
+    .center-image img {
+      max-width: 100%;
+      height: auto;
+    }
+/* Center the image */
+
+.mainbanner {
+    border: 1px solid #ff0000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the play button */
+    .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: xx-large;
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border: 0.3vw solid #ffffffb5;
+    border-radius: 50%;
+    padding: 15px;
+    background: #00000099;
+    }
+
+    /* Style for the image container */
+    .image-container {
+      position: relative;
+      overflow: hidden;
+	  border: 2px solid #ccc; /* Add border to image container */
+      border-radius: 8px; /* Rounded border for image container */
+	  
+    }
+    /* Show play button on hover */
+    .image-container:hover .play-button {
+    opacity: 1;
+    color: white;
+    border: 0.3vw solid #c70d0d;
+    padding: 10px;
+    background: #00000099;
+}
+@media screen and (max-width: 600px) {
+  .image-container:hover .play-button {
+    border: 3px solid #c70d0d;
+    padding: 6px;
+}
+.play-button {
+	padding: 5px;
+	background-color: black;
+	border: 4px solid #ff0d0d;
+	opacity: 0.6;
+	color: white;
+}
+}
+	/* Change animation for button border */
+    .image-container:hover .play-button-border {
+      transform: scale(1.1); /* Scale the border on hover */
+    }  
+
+/* ---------Controlbtn Section Start--------- */
+
+    /* Show ControlBtn on hover */
+    .videosection:hover .controlBtn {
+      opacity: .8;
+	  color: #daa300;
+    }
+	/* Change animation for button border */
+    .videosection:hover .controlBtn {
+      transform: scale(1.0); /* Scale the border on hover */
+    }  
+	
+	/* Style for the controlBtn animation */
+	.controlBtn {
+	transition: all 0.5s ease-in-out;
+    opacity: 0;
+    color: #efefef;
+	cursor: pointer;
+	}
+	
+	.controls
+{
+	height:0px;
+	position:relative;	
+	padding-top:0px;
+}
+
+#leftControls
+{
+	float:left;
+}
+#rightControls
+{
+	float:right;	
+}
+
+.controlContent
+{
+	width:100%;
+	position:absolute;
+	padding:0 15px;
+	opacity:1;
+	margin-top:-30px;
+}
+
+.controlBtn
+{
+	cursor:pointer;
+	opacity: .3;
+} 
+
+.controlBtn:hover {
+	opacity: 1;
+	color: white;
+	
+}
+
+.lbback {
+    background-color: #7f7f8dbf;
+    border-radius: 4px;
+    font-weight: bold;
+    /* padding: 3px; */
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+@media screen and (max-width: 600px) {
+.lbback {
+    background-color: #7f7f8dbf;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 12px;
+}
+}
+
+.live-badge__icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: .25em;
+    background-color: #fc0017;
+    border-radius: 50%;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse{
+		0% {
+		opacity: 1;
+		}
+		50% {
+			opacity: .1;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	
+	.live-badge {
+		color:red;
+	}
+	
+	.live-badge:hover {
+		color:#daa300;
+		cursor: pointer;
+	}
+
+/* ---------Controlbtn Style END--------- */
+
+	
+/* ---------Start Loading Style--------- */
+
+	/* Style for the loading animation */
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 53px;
+      height: 53px;
+      border: 3px solid #daa300;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+      display: none; /* Initially hidden */
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+	
+/* ---------END Loading Style--------- */	
+
+.device__brands{
+	padding-top: 10px;
+}
+
+.adevicebrands {
+	cursor: pointer;
+	opacity: .5;
+}
+.adevicebrands:hover{
+	opacity: 1;
+	color: red;
+	animation: zoom-in;
+	transform: scale(1.1);
+} 
+
+
+/*Modal*/
+/* ---------Start Modal Style--------- */	
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.modal__close {
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    cursor: pointer;
+}
+
+.modal__close i {
+    font-size: 1.5em;
+    transition: transform .1s ease-in-out;
+    color: rgba(255,255,255,.5);
+}
+
+.modal__close:hover i,.modal__close:focus i {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+}
+
+.modal__header {
+    float: center;
+    width: 100%;
+    background: linear-gradient(rgba(12,17,23,0.75),rgba(12,17,23,0.75)),url('/web/20250710163604im_/https://webplayhub.net/admin/css/mystyle.css') no-repeat center center/cover;
+    border-radius: 5px 5px 0 0;
+    padding: .75em 1em;
+}
+
+.modal__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+    z-index: 100;
+}
+
+.modal__inner {
+    opacity: 0;
+    transform: scale(.3);
+    transition: opacity .3s ease-in,transform .2s ease-in;
+    -webkit-box-shadow: 0 5px 25px 0 rgba(12,17,23,.35);
+    -moz-box-shadow: 0 5px 25px 0 rgba(12,17,23,.35);
+    box-shadow: 0 5px 25px 0 rgba(12,17,23,.35);
+    background: #fff;
+    border-radius: 5px;
+}
+
+.modal__inner.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.modal__content {
+    text-align: center;
+    color: #1a1d24;
+    padding: 3em 1em;
+    background: #fff;
+}
+
+.modal__content h1 {
+    font-weight: 700;
+    font-size: 2em;
+    color: #1a1d24;
+}
+
+.modal__content p {
+    font-size: 1.1em;
+}
+
+@media(max-width: 576px) {
+    .modal__content h1 {
+        font-size:1.4em;
+    }
+
+    .modal__content p {
+        font-size: .8em;
+    }
+	.modal__content {
+    text-align: center;
+    color: #1a1d24;
+    padding: .2em 1em;
+    background: #fff;
+	}
+}
+
+.modal__footer {
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+    background: rgba(12,17,23,.1);
+    text-align: center;
+    color: black;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modal__footer .features__list li {
+    flex-direction: column;
+}
+
+.modal__footer .features__list li h1 {
+    color: #0c1117;
+    font-weight: 700;
+    font-size: .7em;
+    line-height: 1.5;
+}
+
+.modal__footer .features__list li img {
+    opacity: 1;
+    min-height: 50px;
+}
+
+.list-group {
+	color: black;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #daa300;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #745a0e;
+    border-color: #007bff;
+}
+/* ---------END Modal Style--------- */	
+
+
+/*------Match Details ------*/
+.descriptionss {
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 20px;
+}
+
+
+.ctlivebtn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color:black;
+}
+
+.btn-outline-success {
+    color: #ffffff;
+    border-color: #28a745;
+    background-color: #28a74578;
+}
+
+.btn-outline-warning {
+    color: #ffffff;
+    border-color: #ffc107;
+}
+
+.btn-outline-warning:hover
+{
+	border-color: white;
+	background-color: #c2b3b380;
+	color: #ffc107;
+}
+#modalcloseright {
+	float:right;
+}
+  
+  .modalclose {
+	  color:#bd2130;
+	  opacity: .7;
+  }
+    
+  .modalclose:hover {
+	  color:red;
+	  opacity: 1;
+	  cursor: pointer;
+  }
+  
+/*------Footer ------*/
+.footer {
+    background-color: #333;
+	padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: .8em;
+}
+
+.copyrights a {
+	color: #daa300;
+}
+
+.copyrights:hover a {
+	color: #daa300;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+.footer {
+	margin-bottom: 9%;
+    background-color: #333;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: .6em;
+}
+
+.copyrights:hover a {
+	font-weight: bold;
+	color: #daa300;
+	}
+
+}
+
+/*
+     FILE ARCHIVED ON 16:36:04 Jul 10, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:21:40 Jun 24, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 1.383
+  load_resource: 1176.606 (2)
+  PetaboxLoader3.resolve: 898.163 (2)
+  PetaboxLoader3.datanode: 143.825 (2)
+*/
