@@ -2,26 +2,32 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Redirecting...</title>
-<script>
-  // ===== সেটিং (দরকার হলে এখানে বদলাও) =====
-  const BASE_URL = 'https://ny.livezstream.com/video/'; // post ফোল্ডার
-  const EXT      = '.html';  // post URL-এ .html না থাকলে এটা '' করে দাও
-
-  // ?ids=xxx থেকে value পড়া
-  const params = new URLSearchParams(window.location.search);
-  let ids = (params.get('ids') || '').replace(/[^a-zA-Z0-9\-_]/g, '');
-
-  if (ids) {
-    window.location.href = BASE_URL + ids + EXT;
-  } else {
-    window.location.href = 'https://ny.livezstream.com/';
-  }
-</script>
-<meta http-equiv="refresh" content="3;url=https://ny.livezstream.com/">
+<title>Loading...</title>
 </head>
 <body>
-  <p>Please wait...</p>
-  <a href="https://ny.livezstream.com/">Go to homepage</a>
+<div id="content"></div>
+<script>
+  // ?ids=xxx পড়া
+  const ids = (new URLSearchParams(window.location.search)
+              .get('ids') || '').replace(/[^a-zA-Z0-9\-_]/g, '');
+
+  if (ids) {
+    // নিজের সাইটের ভেতরের পেজ fetch করে inject করা
+    fetch('/video/' + ids + '.html')
+      .then(r => {
+        if (!r.ok) throw new Error('not found');
+        return r.text();
+      })
+      .then(data => {
+        document.getElementById('content').innerHTML = data;
+      })
+      .catch(err => {
+        // না পেলে সরাসরি ওই পেজেই পাঠিয়ে দাও
+        window.location.href = '/video/' + ids + '.html';
+      });
+  } else {
+    window.location.href = '/';
+  }
+</script>
 </body>
 </html>
